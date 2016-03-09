@@ -7,21 +7,31 @@
 //
 
 import Cocoa
+import Magnet
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
-
+    private var hotKey: HotKey?
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+
+        // ⌘ + Control + B
+        let keyCombo = KeyCombo(keyCode: 11, modifiers: 4352)
+        hotKey = HotKey(identifier: "CommandControlB",
+                        keyCombo: keyCombo,
+                        target: self,
+                        action: #selector(AppDelegate.hotkey))
+        HotKeyCenter.sharedCenter.register(hotKey!)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
+        HotKeyCenter.sharedCenter.unregister(hotKey!)
     }
 
-
+    func hotkey() {
+        print("hotKey!!!!")
+    }
 }
 

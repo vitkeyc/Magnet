@@ -7,179 +7,189 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FAEC34601C8F2275004177E2 /* KeyMagnet.h in Headers */ = {isa = PBXBuildFile; fileRef = FAEC345F1C8F2275004177E2 /* KeyMagnet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FAEC34671C8F2275004177E2 /* KeyMagnet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEC345C1C8F2275004177E2 /* KeyMagnet.framework */; settings = {ASSET_TAGS = (); }; };
-		FAEC346C1C8F2275004177E2 /* KeyMagnetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC346B1C8F2275004177E2 /* KeyMagnetTests.swift */; };
+		FAEC34B31C9059DF004177E2 /* Magnet.h in Headers */ = {isa = PBXBuildFile; fileRef = FAEC34B21C9059DF004177E2 /* Magnet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAEC34BA1C9059DF004177E2 /* Magnet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEC34AF1C9059DF004177E2 /* Magnet.framework */; };
+		FAEC34BF1C9059DF004177E2 /* MagnetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC34BE1C9059DF004177E2 /* MagnetTests.swift */; };
+		FAEC34D81C905B4D004177E2 /* HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC34D71C905B4D004177E2 /* HotKey.swift */; };
+		FAEC34DA1C905B5A004177E2 /* KeyCombo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC34D91C905B5A004177E2 /* KeyCombo.swift */; };
+		FAEC34DE1C905B7C004177E2 /* HotKeyCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC34DD1C905B7C004177E2 /* HotKeyCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FAEC34681C8F2275004177E2 /* PBXContainerItemProxy */ = {
+		FAEC34BB1C9059DF004177E2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FAEC34531C8F2275004177E2 /* Project object */;
+			containerPortal = FAEC34A61C9059DF004177E2 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FAEC345B1C8F2275004177E2;
-			remoteInfo = KeyMagnet;
+			remoteGlobalIDString = FAEC34AE1C9059DF004177E2;
+			remoteInfo = Magnet;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FAEC345C1C8F2275004177E2 /* KeyMagnet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyMagnet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAEC345F1C8F2275004177E2 /* KeyMagnet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyMagnet.h; sourceTree = "<group>"; };
-		FAEC34611C8F2275004177E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAEC34661C8F2275004177E2 /* KeyMagnetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyMagnetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAEC346B1C8F2275004177E2 /* KeyMagnetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyMagnetTests.swift; sourceTree = "<group>"; };
-		FAEC346D1C8F2275004177E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAEC34AF1C9059DF004177E2 /* Magnet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Magnet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAEC34B21C9059DF004177E2 /* Magnet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Magnet.h; sourceTree = "<group>"; };
+		FAEC34B41C9059DF004177E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAEC34B91C9059DF004177E2 /* MagnetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagnetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAEC34BE1C9059DF004177E2 /* MagnetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnetTests.swift; sourceTree = "<group>"; };
+		FAEC34C01C9059DF004177E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAEC34D71C905B4D004177E2 /* HotKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotKey.swift; sourceTree = "<group>"; };
+		FAEC34D91C905B5A004177E2 /* KeyCombo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyCombo.swift; sourceTree = "<group>"; };
+		FAEC34DD1C905B7C004177E2 /* HotKeyCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotKeyCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FAEC34581C8F2275004177E2 /* Frameworks */ = {
+		FAEC34AB1C9059DF004177E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FAEC34631C8F2275004177E2 /* Frameworks */ = {
+		FAEC34B61C9059DF004177E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAEC34671C8F2275004177E2 /* KeyMagnet.framework in Frameworks */,
+				FAEC34BA1C9059DF004177E2 /* Magnet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FAEC34521C8F2275004177E2 = {
+		FAEC34A51C9059DF004177E2 = {
 			isa = PBXGroup;
 			children = (
-				FAEC345E1C8F2275004177E2 /* KeyMagnet */,
-				FAEC346A1C8F2275004177E2 /* KeyMagnetTests */,
-				FAEC345D1C8F2275004177E2 /* Products */,
+				FAEC34B11C9059DF004177E2 /* Magnet */,
+				FAEC34BD1C9059DF004177E2 /* MagnetTests */,
+				FAEC34B01C9059DF004177E2 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FAEC345D1C8F2275004177E2 /* Products */ = {
+		FAEC34B01C9059DF004177E2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FAEC345C1C8F2275004177E2 /* KeyMagnet.framework */,
-				FAEC34661C8F2275004177E2 /* KeyMagnetTests.xctest */,
+				FAEC34AF1C9059DF004177E2 /* Magnet.framework */,
+				FAEC34B91C9059DF004177E2 /* MagnetTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FAEC345E1C8F2275004177E2 /* KeyMagnet */ = {
+		FAEC34B11C9059DF004177E2 /* Magnet */ = {
 			isa = PBXGroup;
 			children = (
-				FAEC345F1C8F2275004177E2 /* KeyMagnet.h */,
-				FAEC34611C8F2275004177E2 /* Info.plist */,
+				FAEC34D71C905B4D004177E2 /* HotKey.swift */,
+				FAEC34D91C905B5A004177E2 /* KeyCombo.swift */,
+				FAEC34DD1C905B7C004177E2 /* HotKeyCenter.swift */,
+				FAEC34B21C9059DF004177E2 /* Magnet.h */,
+				FAEC34B41C9059DF004177E2 /* Info.plist */,
 			);
-			path = KeyMagnet;
+			path = Magnet;
 			sourceTree = "<group>";
 		};
-		FAEC346A1C8F2275004177E2 /* KeyMagnetTests */ = {
+		FAEC34BD1C9059DF004177E2 /* MagnetTests */ = {
 			isa = PBXGroup;
 			children = (
-				FAEC346B1C8F2275004177E2 /* KeyMagnetTests.swift */,
-				FAEC346D1C8F2275004177E2 /* Info.plist */,
+				FAEC34BE1C9059DF004177E2 /* MagnetTests.swift */,
+				FAEC34C01C9059DF004177E2 /* Info.plist */,
 			);
-			path = KeyMagnetTests;
+			path = MagnetTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		FAEC34591C8F2275004177E2 /* Headers */ = {
+		FAEC34AC1C9059DF004177E2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAEC34601C8F2275004177E2 /* KeyMagnet.h in Headers */,
+				FAEC34B31C9059DF004177E2 /* Magnet.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		FAEC345B1C8F2275004177E2 /* KeyMagnet */ = {
+		FAEC34AE1C9059DF004177E2 /* Magnet */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FAEC34701C8F2275004177E2 /* Build configuration list for PBXNativeTarget "KeyMagnet" */;
+			buildConfigurationList = FAEC34C31C9059DF004177E2 /* Build configuration list for PBXNativeTarget "Magnet" */;
 			buildPhases = (
-				FAEC34571C8F2275004177E2 /* Sources */,
-				FAEC34581C8F2275004177E2 /* Frameworks */,
-				FAEC34591C8F2275004177E2 /* Headers */,
-				FAEC345A1C8F2275004177E2 /* Resources */,
+				FAEC34AA1C9059DF004177E2 /* Sources */,
+				FAEC34AB1C9059DF004177E2 /* Frameworks */,
+				FAEC34AC1C9059DF004177E2 /* Headers */,
+				FAEC34AD1C9059DF004177E2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = KeyMagnet;
-			productName = KeyMagnet;
-			productReference = FAEC345C1C8F2275004177E2 /* KeyMagnet.framework */;
+			name = Magnet;
+			productName = Magnet;
+			productReference = FAEC34AF1C9059DF004177E2 /* Magnet.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FAEC34651C8F2275004177E2 /* KeyMagnetTests */ = {
+		FAEC34B81C9059DF004177E2 /* MagnetTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FAEC34731C8F2275004177E2 /* Build configuration list for PBXNativeTarget "KeyMagnetTests" */;
+			buildConfigurationList = FAEC34C61C9059DF004177E2 /* Build configuration list for PBXNativeTarget "MagnetTests" */;
 			buildPhases = (
-				FAEC34621C8F2275004177E2 /* Sources */,
-				FAEC34631C8F2275004177E2 /* Frameworks */,
-				FAEC34641C8F2275004177E2 /* Resources */,
+				FAEC34B51C9059DF004177E2 /* Sources */,
+				FAEC34B61C9059DF004177E2 /* Frameworks */,
+				FAEC34B71C9059DF004177E2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FAEC34691C8F2275004177E2 /* PBXTargetDependency */,
+				FAEC34BC1C9059DF004177E2 /* PBXTargetDependency */,
 			);
-			name = KeyMagnetTests;
-			productName = KeyMagnetTests;
-			productReference = FAEC34661C8F2275004177E2 /* KeyMagnetTests.xctest */;
+			name = MagnetTests;
+			productName = MagnetTests;
+			productReference = FAEC34B91C9059DF004177E2 /* MagnetTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FAEC34531C8F2275004177E2 /* Project object */ = {
+		FAEC34A61C9059DF004177E2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Shunsuke Furubayashi";
 				TargetAttributes = {
-					FAEC345B1C8F2275004177E2 = {
+					FAEC34AE1C9059DF004177E2 = {
 						CreatedOnToolsVersion = 7.0.1;
 					};
-					FAEC34651C8F2275004177E2 = {
+					FAEC34B81C9059DF004177E2 = {
 						CreatedOnToolsVersion = 7.0.1;
 					};
 				};
 			};
-			buildConfigurationList = FAEC34561C8F2275004177E2 /* Build configuration list for PBXProject "KeyMagnet" */;
+			buildConfigurationList = FAEC34A91C9059DF004177E2 /* Build configuration list for PBXProject "Magnet" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = FAEC34521C8F2275004177E2;
-			productRefGroup = FAEC345D1C8F2275004177E2 /* Products */;
+			mainGroup = FAEC34A51C9059DF004177E2;
+			productRefGroup = FAEC34B01C9059DF004177E2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FAEC345B1C8F2275004177E2 /* KeyMagnet */,
-				FAEC34651C8F2275004177E2 /* KeyMagnetTests */,
+				FAEC34AE1C9059DF004177E2 /* Magnet */,
+				FAEC34B81C9059DF004177E2 /* MagnetTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FAEC345A1C8F2275004177E2 /* Resources */ = {
+		FAEC34AD1C9059DF004177E2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FAEC34641C8F2275004177E2 /* Resources */ = {
+		FAEC34B71C9059DF004177E2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -189,33 +199,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FAEC34571C8F2275004177E2 /* Sources */ = {
+		FAEC34AA1C9059DF004177E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAEC34DA1C905B5A004177E2 /* KeyCombo.swift in Sources */,
+				FAEC34DE1C905B7C004177E2 /* HotKeyCenter.swift in Sources */,
+				FAEC34D81C905B4D004177E2 /* HotKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FAEC34621C8F2275004177E2 /* Sources */ = {
+		FAEC34B51C9059DF004177E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAEC346C1C8F2275004177E2 /* KeyMagnetTests.swift in Sources */,
+				FAEC34BF1C9059DF004177E2 /* MagnetTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FAEC34691C8F2275004177E2 /* PBXTargetDependency */ = {
+		FAEC34BC1C9059DF004177E2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FAEC345B1C8F2275004177E2 /* KeyMagnet */;
-			targetProxy = FAEC34681C8F2275004177E2 /* PBXContainerItemProxy */;
+			target = FAEC34AE1C9059DF004177E2 /* Magnet */;
+			targetProxy = FAEC34BB1C9059DF004177E2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		FAEC346E1C8F2275004177E2 /* Debug */ = {
+		FAEC34C11C9059DF004177E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -261,7 +274,7 @@
 			};
 			name = Debug;
 		};
-		FAEC346F1C8F2275004177E2 /* Release */ = {
+		FAEC34C21C9059DF004177E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -299,60 +312,63 @@
 			};
 			name = Release;
 		};
-		FAEC34711C8F2275004177E2 /* Debug */ = {
+		FAEC34C41C9059DF004177E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = KeyMagnet/Info.plist;
+				INFOPLIST_FILE = Magnet/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.clipy-app.KeyMagnet";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.clipy-app.Magnet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		FAEC34721C8F2275004177E2 /* Release */ = {
+		FAEC34C51C9059DF004177E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = KeyMagnet/Info.plist;
+				INFOPLIST_FILE = Magnet/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.clipy-app.KeyMagnet";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.clipy-app.Magnet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		FAEC34741C8F2275004177E2 /* Debug */ = {
+		FAEC34C71C9059DF004177E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = KeyMagnetTests/Info.plist;
+				INFOPLIST_FILE = MagnetTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.clipy-app.KeyMagnetTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.clipy-app.MagnetTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		FAEC34751C8F2275004177E2 /* Release */ = {
+		FAEC34C81C9059DF004177E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = KeyMagnetTests/Info.plist;
+				INFOPLIST_FILE = MagnetTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.clipy-app.KeyMagnetTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.clipy-app.MagnetTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -360,32 +376,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FAEC34561C8F2275004177E2 /* Build configuration list for PBXProject "KeyMagnet" */ = {
+		FAEC34A91C9059DF004177E2 /* Build configuration list for PBXProject "Magnet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FAEC346E1C8F2275004177E2 /* Debug */,
-				FAEC346F1C8F2275004177E2 /* Release */,
+				FAEC34C11C9059DF004177E2 /* Debug */,
+				FAEC34C21C9059DF004177E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FAEC34701C8F2275004177E2 /* Build configuration list for PBXNativeTarget "KeyMagnet" */ = {
+		FAEC34C31C9059DF004177E2 /* Build configuration list for PBXNativeTarget "Magnet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FAEC34711C8F2275004177E2 /* Debug */,
-				FAEC34721C8F2275004177E2 /* Release */,
+				FAEC34C41C9059DF004177E2 /* Debug */,
+				FAEC34C51C9059DF004177E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		FAEC34731C8F2275004177E2 /* Build configuration list for PBXNativeTarget "KeyMagnetTests" */ = {
+		FAEC34C61C9059DF004177E2 /* Build configuration list for PBXNativeTarget "MagnetTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FAEC34741C8F2275004177E2 /* Debug */,
-				FAEC34751C8F2275004177E2 /* Release */,
+				FAEC34C71C9059DF004177E2 /* Debug */,
+				FAEC34C81C9059DF004177E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FAEC34531C8F2275004177E2 /* Project object */;
+	rootObject = FAEC34A61C9059DF004177E2 /* Project object */;
 }
