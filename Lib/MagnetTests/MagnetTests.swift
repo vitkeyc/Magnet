@@ -1,15 +1,15 @@
 //
-//  KeyMagnetTests.swift
-//  KeyMagnetTests
+//  MagnetTests.swift
+//  MagnetTests
 //
 //  Created by 古林俊佑 on 2016/03/09.
 //  Copyright © 2016年 Shunsuke Furubayashi. All rights reserved.
 //
 
 import XCTest
-@testable import KeyMagnet
+@testable import Magnet
 
-class KeyMagnetTests: XCTestCase {
+class MagnetTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
