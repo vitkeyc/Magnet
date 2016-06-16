@@ -14,19 +14,35 @@ public final class KeyCombo: NSCopying, Equatable {
     // MARK: - Properties
     public let keyCode: Int
     public let modifiers: Int
-    
-    public var plist: [String: AnyObject] {
-        return ["keyCode": keyCode, "modifiers": modifiers]
+    public let doubledModifiers: Bool
+
+    public enum ModifierKey {
+        case Command
+        case Shift
+        case Control
+        case Alt
+        case None
+
+        var modifier: Int {
+            switch self {
+            case .Command:
+                return cmdKey
+            case .Shift:
+                return shiftKey
+            case .Control:
+                return controlKey
+            case .Alt:
+                return optionKey
+            case .None:
+                return 0
+            }
+        }
     }
-    public var isValidHotKeyCombo: Bool {
-        return keyCode >= 0 && modifiers > 0
-    }
-    public var isClearCombo: Bool {
-        return keyCode == -1 && modifiers == -1
-    }
-    
+
     // MARK: - Initialize
-    public init(keyCode: Int, modifiers: Int) {
+    public init?(keyCode: Int, modifiers: Int) {
+        if keyCode < 0 || modifiers < 0 { return nil }
+
         switch keyCode {
         case kVK_F1: fallthrough
         case kVK_F2: fallthrough
@@ -53,37 +69,38 @@ public final class KeyCombo: NSCopying, Equatable {
             self.modifiers = modifiers
         }
         self.keyCode = keyCode
+        self.doubledModifiers = false
     }
-    
-    public init(plist: [String: AnyObject]) {
-        if plist.isEmpty {
-            self.keyCode = -1
-            self.modifiers = -1
-        } else {
-            let keyCode = plist["keyCode"] as? Int ?? -1
-            let modifiers = plist["modifiers"] as? Int ?? -1
-            self.keyCode = (keyCode < 0) ? -1 : keyCode
-            self.modifiers = (modifiers <= 0) ? -1 : modifiers
-        }
-    }
-    
-    @objc public func copyWithZone(zone: NSZone) -> AnyObject {
-        return KeyCombo(keyCode: keyCode, modifiers: modifiers)
-    }
-}
 
-// MARK: - Static Methods
-public extension KeyCombo {
-    static func clearKeyCombo() -> KeyCombo {
-        return keyCombo(-1, modifiers: -1)
+    public init?(doubledModifiers modifiers: Int) {
+        if modifiers != shiftKey &&
+            modifiers != controlKey &&
+            modifiers != optionKey &&
+            modifiers != cmdKey { return nil }
+
+        self.keyCode = 0
+        self.modifiers = modifiers
+        self.doubledModifiers = true
     }
-    
-    static func keyCombo(keyCode: Int, modifiers: Int) -> KeyCombo {
-        return KeyCombo(keyCode: keyCode, modifiers: modifiers)
+
+    public init?(doubledModifiers modifiers: ModifierKey) {
+        if modifiers == .None { return nil }
+
+        self.keyCode = 0
+        self.modifiers = modifiers.modifier
+        self.doubledModifiers = true
+    }
+
+    @objc public func copyWithZone(zone: NSZone) -> AnyObject {
+        if doubledModifiers {
+            return KeyCombo(doubledModifiers: modifiers)!
+        } else {
+            return KeyCombo(keyCode: keyCode, modifiers: modifiers)!
+        }
     }
 }
 
 // MARK: - Equatable
 public func ==(lhs: KeyCombo, rhs: KeyCombo) -> Bool {
-    return lhs.keyCode == rhs.keyCode && lhs.modifiers == rhs.modifiers
+    return lhs.keyCode == rhs.keyCode && lhs.modifiers == rhs.modifiers && lhs.doubledModifiers == rhs.doubledModifiers
 }

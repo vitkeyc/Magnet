@@ -20,11 +20,6 @@ public final class HotKey: Equatable {
     public var hotKeyRef: EventHotKeyRef?
 
     // MARK: - Init
-    public init() {
-        self.identifier = ""
-        self.keyCombo   = KeyCombo.clearKeyCombo()
-    }
-    
     public init(identifier: String, keyCombo: KeyCombo, target: AnyObject? = nil, action: Selector? = nil) {
         self.identifier = identifier
         self.keyCombo   = keyCombo
@@ -42,6 +37,16 @@ public extension HotKey {
                 target.performSelector(selector, withObject: self)
             }
         }
+    }
+}
+
+// MARK: - Register & UnRegister
+public extension HotKey {
+    public func register() -> Bool {
+        return HotKeyCenter.sharedCenter.register(self)
+    }
+    public func unregister() {
+        return HotKeyCenter.sharedCenter.unregister(self)
     }
 }
 
