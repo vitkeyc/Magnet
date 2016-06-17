@@ -17,7 +17,7 @@ public final class HotKeyCenter {
     private var hotKeyMap = [NSNumber: HotKey]()
     private var hotKeyCount: UInt32 = 0
 
-    private var tappedModifierKey = KeyCombo.ModifierKey.None
+    private var tappedModifierKey = NSEventModifierFlags(rawValue: 0)
     private var multiModifiers = false
 
     // MARK: - Initialize
@@ -177,24 +177,23 @@ private extension HotKeyCenter {
             return Unmanaged.passRetained(event)
         }
 
-        switch tappedModifierKey {
-        case .Command where commandTapped,
-             .Shift where shiftTapped,
-             .Control where controlTapped,
-             .Alt where altTapped:
-            doubleTappedHotKey(tappedModifierKey.modifier)
-            tappedModifierKey = .None
-        default:
+        if (tappedModifierKey.contains(.CommandKeyMask) && commandTapped) ||
+            (tappedModifierKey.contains(.ShiftKeyMask) && shiftTapped)    ||
+            (tappedModifierKey.contains(.ControlKeyMask) && controlTapped) ||
+            (tappedModifierKey.contains(.AlternateKeyMask) && altTapped) {
+            doubleTappedHotKey(KeyTransformer.cocoaToCarbonFlags(tappedModifierKey))
+            tappedModifierKey = NSEventModifierFlags(rawValue: 0)
+        } else {
             if commandTapped {
-                tappedModifierKey = .Command
+                tappedModifierKey = .CommandKeyMask
             } else if shiftTapped {
-                tappedModifierKey = .Shift
+                tappedModifierKey = .ShiftKeyMask
             } else if controlTapped {
-                tappedModifierKey = .Control
+                tappedModifierKey = .ControlKeyMask
             } else if altTapped {
-                tappedModifierKey = .Alt
+                tappedModifierKey = .AlternateKeyMask
             } else {
-                tappedModifierKey = .None
+                tappedModifierKey = NSEventModifierFlags(rawValue: 0)
             }
         }
 
@@ -202,7 +201,7 @@ private extension HotKeyCenter {
         let delay = 0.3 * Double(NSEC_PER_SEC)
         let time  = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         dispatch_after(time, dispatch_get_main_queue(), { [unowned self] in
-            self.tappedModifierKey = .None
+            self.tappedModifierKey = NSEventModifierFlags(rawValue: 0)
         })
 
         return Unmanaged.passRetained(event)
