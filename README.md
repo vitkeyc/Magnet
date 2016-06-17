@@ -1,5 +1,5 @@
 # Magnet
-[![Release version](https://img.shields.io/github/release/Clipy/Magnet.svg)]()
+[![Release version](https://img.shields.io/github/release/Clipy/Magnet.svg)](https://github.com/Clipy/Magnet/releases)
 [![License: MIT](https://img.shields.io/github/license/Clipy/Magnet.svg)](https://github.com/Clipy/Magnet/blob/master/LICENSE)
 
 Customaize global hotkeys in macOS. Written by swift.
