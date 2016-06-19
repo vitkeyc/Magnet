@@ -1,6 +1,8 @@
 # Magnet
 [![Release version](https://img.shields.io/github/release/Clipy/Magnet.svg)](https://github.com/Clipy/Magnet/releases/latest)
 [![License: MIT](https://img.shields.io/github/license/Clipy/Magnet.svg)](https://github.com/Clipy/Magnet/blob/master/LICENSE)
+[![Version](https://img.shields.io/cocoapods/v/Magnet.svg)](http://cocoadocs.org/docsets/KeychainAccess)
+[![Platform](https://img.shields.io/cocoapods/p/Magnet.svg)](http://cocoadocs.org/docsets/KeychainAccess)
 
 Customaize global hotkeys in macOS. Written by swift.
 
@@ -23,7 +25,7 @@ if let keyCombo = KeyCombo(keyCode: 11, modifiers: 4352) {
 
 Add `⌘ dobule tap` hotkey.
 ```
-if let keyCombo = KeyCombo(doubledModifiers: .Command) {
+if let keyCombo = KeyCombo(doubledCocoaModifiers: .Command) {
    let hotKey = HotKey(identifier: "CommandDobuleTap", keyCombo: keyCombo, target: self, action: #selector())
    hotKey?.register()
 }
@@ -31,7 +33,7 @@ if let keyCombo = KeyCombo(doubledModifiers: .Command) {
 
 Add `Control double tap` hotkey.
 ```
-if let keyCombo = KeyCombo(doubledModifiers: controlKey) {
+if let keyCombo = KeyCombo(doubledCarbonModifiers: controlKey) {
    let hotKey = HotKey(identifier: "ControlDoubleTap", keyCombo: keyCombo, target: self, action: #selector())
    hotKey?.register()
 }
