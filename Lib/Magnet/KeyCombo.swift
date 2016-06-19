@@ -9,7 +9,7 @@
 import Cocoa
 import Carbon
 
-public final class KeyCombo: NSCopying, Equatable {
+public final class KeyCombo: NSCopying, Equatable, NSCoding {
 
     // MARK: - Properties
     public let keyCode: Int
@@ -63,6 +63,18 @@ public final class KeyCombo: NSCopying, Equatable {
         } else {
             return KeyCombo(keyCode: keyCode, carbonModifiers: modifiers)!
         }
+    }
+
+    @objc public init?(coder aDecoder: NSCoder) {
+        self.keyCode = aDecoder.decodeIntegerForKey("keyCode")
+        self.modifiers = aDecoder.decodeIntegerForKey("modifiers")
+        self.doubledModifiers = aDecoder.decodeBoolForKey("doubledModifiers")
+    }
+
+    @objc public func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeInteger(keyCode, forKey: "keyCode")
+        aCoder.encodeInteger(modifiers, forKey: "modifiers")
+        aCoder.encodeBool(doubledModifiers, forKey: "doubledModifiers")
     }
 }
 
