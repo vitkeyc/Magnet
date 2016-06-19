@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA7145471D147F1B004A04D4 /* KeyTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7145461D147F1B004A04D4 /* KeyTransformer.swift */; };
+		FAA256CA1D172E64000A23BC /* KeyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA256C91D172E64000A23BC /* KeyCode.swift */; };
 		FAEC34B31C9059DF004177E2 /* Magnet.h in Headers */ = {isa = PBXBuildFile; fileRef = FAEC34B21C9059DF004177E2 /* Magnet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAEC34BA1C9059DF004177E2 /* Magnet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEC34AF1C9059DF004177E2 /* Magnet.framework */; };
 		FAEC34BF1C9059DF004177E2 /* MagnetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC34BE1C9059DF004177E2 /* MagnetTests.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		FA7145461D147F1B004A04D4 /* KeyTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyTransformer.swift; sourceTree = "<group>"; };
+		FAA256C91D172E64000A23BC /* KeyCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyCode.swift; sourceTree = "<group>"; };
 		FAEC34AF1C9059DF004177E2 /* Magnet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Magnet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEC34B21C9059DF004177E2 /* Magnet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Magnet.h; sourceTree = "<group>"; };
 		FAEC34B41C9059DF004177E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				FAEC34D91C905B5A004177E2 /* KeyCombo.swift */,
 				FAEC34DD1C905B7C004177E2 /* HotKeyCenter.swift */,
 				FA7145461D147F1B004A04D4 /* KeyTransformer.swift */,
+				FAA256C91D172E64000A23BC /* KeyCode.swift */,
 				FAEC34B21C9059DF004177E2 /* Magnet.h */,
 				FAEC34B41C9059DF004177E2 /* Info.plist */,
 			);
@@ -206,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA256CA1D172E64000A23BC /* KeyCode.swift in Sources */,
 				FAEC34DA1C905B5A004177E2 /* KeyCombo.swift in Sources */,
 				FAEC34DE1C905B7C004177E2 /* HotKeyCenter.swift in Sources */,
 				FAEC34D81C905B4D004177E2 /* HotKey.swift in Sources */,
