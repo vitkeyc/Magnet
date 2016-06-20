@@ -118,7 +118,6 @@ private extension HotKeyCenter {
         let source = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, event!, 0)
         CFRunLoopAddSource(CFRunLoopGetCurrent(), source, kCFRunLoopCommonModes)
         CGEventTapEnable(event!, true)
-        CFRunLoopRun()
     }
 
     private func sendCarbonEvent(event: EventRef) -> OSStatus {
@@ -161,10 +160,10 @@ private extension HotKeyCenter {
     private func sendModifiersEvent(event: CGEvent) -> Unmanaged<CGEvent>? {
         let flags = CGEventGetFlags(event)
 
-        let commandTapped = flags.rawValue & CGEventFlags.MaskCommand.rawValue == CGEventFlags.MaskCommand.rawValue
-        let shiftTapped = flags.rawValue & CGEventFlags.MaskShift.rawValue == CGEventFlags.MaskShift.rawValue
-        let controlTapped = flags.rawValue & CGEventFlags.MaskControl.rawValue == CGEventFlags.MaskControl.rawValue
-        let altTapped = flags.rawValue & CGEventFlags.MaskAlternate.rawValue == CGEventFlags.MaskAlternate.rawValue
+        let commandTapped = flags.contains(.MaskCommand)
+        let shiftTapped = flags.contains(.MaskShift)
+        let controlTapped = flags.contains(.MaskControl)
+        let altTapped = flags.contains(.MaskAlternate)
 
         // Only one modifier key
         let totalHash = commandTapped.hashValue + altTapped.hashValue + shiftTapped.hashValue + controlTapped.hashValue
@@ -212,5 +211,12 @@ private extension HotKeyCenter {
         hotKeys.map { $0.1 }
             .filter { $0.keyCombo.doubledModifiers && $0.keyCombo.modifiers == key }
             .forEach { $0.invoke() }
+    }
+}
+
+// MARK: - CGEventFlags
+private extension CGEventFlags {
+    private func contains(flags: CGEventFlags) -> Bool {
+        return rawValue & flags.rawValue == flags.rawValue
     }
 }
