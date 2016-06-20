@@ -53,6 +53,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		31B3E31F1D17CC4800635572 /* Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Example.entitlements; sourceTree = "<group>"; };
 		FAEC347F1C8F2299004177E2 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEC34821C8F2299004177E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAEC34841C8F2299004177E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		FAEC34811C8F2299004177E2 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				31B3E31F1D17CC4800635572 /* Example.entitlements */,
 				FAEC34821C8F2299004177E2 /* AppDelegate.swift */,
 				FAEC34841C8F2299004177E2 /* Assets.xcassets */,
 				FAEC34861C8F2299004177E2 /* MainMenu.xib */,
@@ -144,6 +146,11 @@
 				TargetAttributes = {
 					FAEC347E1C8F2299004177E2 = {
 						CreatedOnToolsVersion = 7.0.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -316,6 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -331,6 +339,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
