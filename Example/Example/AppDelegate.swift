@@ -14,62 +14,67 @@ import Carbon
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
-    private var hotKey: HotKey?
-    private var hotKey2: HotKey?
-    private var hotKey3: HotKey?
-    private var hotKey4: HotKey?
-    private var hotKey5: HotKey?
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-
         // ⌘ + Control + B
         guard let keyCombo = KeyCombo(keyCode: 11, carbonModifiers: 4352) else { return }
-        //let keyCombo = KeyCombo(keyCode: 11, modifiers: 4352)
-        hotKey = HotKey(identifier: "CommandControlB",
+        let hotKey = HotKey(identifier: "CommandControlB",
                         keyCombo: keyCombo,
                         target: self,
                         action: #selector(AppDelegate.tappedHotKey))
-        hotKey?.register()
+        hotKey.register()
 
-        guard let keyCombo2 = KeyCombo(doubledModifiers: .CommandKeyMask) else { return }
-        hotKey2 = HotKey(identifier: "CommandDobuleTap",
-                         keyCombo: keyCombo2,
-                         target: self,
-                         action: #selector(AppDelegate.tappedDoubleCommandKey))
-        hotKey2?.register()
+        // Shift + Control + A
+        guard let keyCombo2 = KeyCombo(keyCode: .A, cocoaModifiers: [.ShiftKeyMask, .ControlKeyMask]) else { return }
+        let hotKey2 = HotKey(identifier: "ShiftControlA",
+                             keyCombo: keyCombo2,
+                             target: self,
+                             action: #selector(AppDelegate.tappedHotKey2))
+        hotKey2.register()
 
-        guard let keyCombo3 = KeyCombo(doubledModifiers: .ShiftKeyMask) else { return }
-        hotKey3 = HotKey(identifier: "ShiftDobuleTap",
+        //　⌘　Double Tap
+        guard let keyCombo3 = KeyCombo(doubledCocoaModifiers: .CommandKeyMask) else { return }
+        let hotKey3 = HotKey(identifier: "CommandDobuleTap",
                          keyCombo: keyCombo3,
                          target: self,
-                         action: #selector(AppDelegate.tappedDoubleShiftKey))
-        hotKey3?.register()
+                         action: #selector(AppDelegate.tappedDoubleCommandKey))
+        hotKey3.register()
 
-        guard let keyCombo4 = KeyCombo(doubledModifiers: .ControlKeyMask) else { return }
-        hotKey4 = HotKey(identifier: "ControlDobuleTap",
+        //　Shift　Double Tap
+        guard let keyCombo4 = KeyCombo(doubledCocoaModifiers: .ShiftKeyMask) else { return }
+        let hotKey4 = HotKey(identifier: "ShiftDobuleTap",
                          keyCombo: keyCombo4,
                          target: self,
-                         action: #selector(AppDelegate.tappedDoubleControlKey))
-        hotKey4?.register()
+                         action: #selector(AppDelegate.tappedDoubleShiftKey))
+        hotKey4.register()
 
-        guard let keyCombo5 = KeyCombo(doubledModifiers: .AlternateKeyMask) else { return }
-        hotKey5 = HotKey(identifier: "AltDobuleTap",
+        //　Control　Double Tap
+        guard let keyCombo5 = KeyCombo(doubledCocoaModifiers: .ControlKeyMask) else { return }
+        let hotKey5 = HotKey(identifier: "ControlDobuleTap",
                          keyCombo: keyCombo5,
                          target: self,
+                         action: #selector(AppDelegate.tappedDoubleControlKey))
+        hotKey5.register()
+
+        //　Option　Double Tap
+        guard let keyCombo6 = KeyCombo(doubledCocoaModifiers: .AlternateKeyMask) else { return }
+        let hotKey6 = HotKey(identifier: "AltDobuleTap",
+                         keyCombo: keyCombo6,
+                         target: self,
                          action: #selector(AppDelegate.tappedDoubleAltKey))
-        hotKey5?.register()
+        hotKey6.register()
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
-        hotKey?.unregister()
-        hotKey2?.unregister()
-        hotKey3?.unregister()
-        hotKey4?.unregister()
-        hotKey5?.unregister()
+        HotKeyCenter.sharedCenter.unregisterAll()
     }
 
     func tappedHotKey() {
         print("hotKey!!!!")
+    }
+
+    func tappedHotKey2() {
+        print("hotKey2!!!!")
     }
 
     func tappedDoubleCommandKey() {

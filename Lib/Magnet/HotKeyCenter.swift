@@ -110,10 +110,11 @@ private extension HotKeyCenter {
         let mask = CGEventMask((1 << CGEventType.FlagsChanged.rawValue))
         let event = CGEventTapCreate(.CGHIDEventTap,
                                      .HeadInsertEventTap,
-                                     .Default,
+                                     .ListenOnly,
                                      mask,
                                      { (_, _, event, _) in return HotKeyCenter.sharedCenter.sendModifiersEvent(event) },
                                      nil)
+        if event == nil { return }
         let source = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, event!, 0)
         CFRunLoopAddSource(CFRunLoopGetCurrent(), source, kCFRunLoopCommonModes)
         CGEventTapEnable(event!, true)
