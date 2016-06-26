@@ -25,7 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         hotKey.register()
 
         // Shift + Control + A
-        guard let keyCombo2 = KeyCombo(keyCode: .A, cocoaModifiers: [.ShiftKeyMask, .ControlKeyMask]) else { return }
+        guard let keyCombo2 = KeyCombo(keyCode: 0, cocoaModifiers: [.ShiftKeyMask, .ControlKeyMask]) else { return }
         let hotKey2 = HotKey(identifier: "ShiftControlA",
                              keyCombo: keyCombo2,
                              target: self,

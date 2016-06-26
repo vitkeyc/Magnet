@@ -15,6 +15,10 @@ public final class KeyCombo: NSObject, NSCopying, NSCoding {
     public let keyCode: Int
     public let modifiers: Int
     public let doubledModifiers: Bool
+    public var characters: String {
+        if doubledModifiers { return "" }
+        return KeyCodeTransformer.sharedTransformer.transformValue(keyCode, carbonModifiers: modifiers)
+    }
 
     // MARK: - Initialize
     public init?(keyCode: Int, carbonModifiers: Int) {
@@ -29,18 +33,6 @@ public final class KeyCombo: NSObject, NSCopying, NSCoding {
         self.doubledModifiers = false
     }
 
-    public init?(keyCode: KeyCode, carbonModifiers: Int) {
-        if carbonModifiers < 0 { return nil }
-
-        if KeyTransformer.containsFunctionKey(keyCode.rawValue) {
-            self.modifiers = Int(UInt(carbonModifiers) | NSEventModifierFlags.FunctionKeyMask.rawValue)
-        } else {
-            self.modifiers = carbonModifiers
-        }
-        self.keyCode = keyCode.rawValue
-        self.doubledModifiers = false
-    }
-
     public init?(keyCode: Int, cocoaModifiers: NSEventModifierFlags) {
         if keyCode < 0 || !KeyTransformer.supportedCocoaFlags(cocoaModifiers) { return nil }
 
@@ -50,18 +42,6 @@ public final class KeyCombo: NSObject, NSCopying, NSCoding {
             self.modifiers = KeyTransformer.cocoaToCarbonFlags(cocoaModifiers)
         }
         self.keyCode = keyCode
-        self.doubledModifiers = false
-    }
-
-    public init?(keyCode: KeyCode, cocoaModifiers: NSEventModifierFlags) {
-        if !KeyTransformer.supportedCocoaFlags(cocoaModifiers) { return nil }
-
-        if KeyTransformer.containsFunctionKey(keyCode.rawValue) {
-            self.modifiers = Int(UInt(KeyTransformer.cocoaToCarbonFlags(cocoaModifiers)) | NSEventModifierFlags.FunctionKeyMask.rawValue)
-        } else {
-            self.modifiers = KeyTransformer.cocoaToCarbonFlags(cocoaModifiers)
-        }
-        self.keyCode = keyCode.rawValue
         self.doubledModifiers = false
     }
 

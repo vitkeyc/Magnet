@@ -27,15 +27,6 @@ if let keyCombo = KeyCombo(keyCode: 11, carbonModifiers: 4352) {
 }
 ```
 
-or
-
-```
-if let keyCombo = KeyCombo(keyCode: KeyCode.B, cocoaModifiers: [.CommandKeyMask, .ControlKeyMask]]) {
-   let hotKey = HotKey(identifier: "CommandControlB", keyCombo: keyCombo, target: self, action: #selector())
-   hotKey.register() // or HotKeyCenter.sharedCenter.register(hotKey)
-}
-```
-
 ### Register Double tap hotkey
 Add `⌘ double tap` hotkey.
 ```
