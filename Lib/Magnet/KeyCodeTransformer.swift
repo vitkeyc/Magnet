@@ -111,6 +111,6 @@ private extension KeyCodeTransformer {
 // MARK: - Charactor
 private extension KeyCodeTransformer {
     private func unicharToString(char: unichar) -> String {
-        return String(format: "%c", char)
+        return String(format: "%C", char)
     }
 }
