@@ -163,6 +163,7 @@
 				TargetAttributes = {
 					FAEC34AE1C9059DF004177E2 = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0800;
 					};
 					FAEC34B81C9059DF004177E2 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -337,6 +338,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -356,6 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.clipy-app.Magnet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
