@@ -15,11 +15,17 @@ Also supports sandbox application.
 - Swift 3.0+
 
 ## Usage
+### CocoaPods
 ```
 platform :osx, '10.9'
 use_frameworks!
 
 pod 'Magnet'
+```
+
+### Carthage
+```
+github "Clipy/Magnet"
 ```
 
 ## Example
