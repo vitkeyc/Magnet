@@ -1,9 +1,11 @@
 //
 //  HotKeyCenter.swift
-//  Magnet
 //
-//  Created by 古林俊佑 on 2016/03/09.
-//  Copyright © 2016年 Shunsuke Furubayashi. All rights reserved.
+//  Magnet
+//  GitHub: https://github.com/clipy
+//  HP: https://clipy-app.com
+//
+//  Copyright © 2015-2019 Clipy Project.
 //
 
 import Cocoa
@@ -178,9 +180,9 @@ private extension HotKeyCenter {
         let altTapped = flags.contains(.maskAlternate)
 
         // Only one modifier key
-        let totalHash = commandTapped.intValue + altTapped.intValue + shiftTapped.intValue + controlTapped.intValue
-        if totalHash == 0 { return Unmanaged.passUnretained(event) }
-        if totalHash > 1 {
+        let modifiersCount = [commandTapped, altTapped, shiftTapped, controlTapped].trueCount
+        if modifiersCount == 0 { return Unmanaged.passUnretained(event) }
+        if modifiersCount > 1 {
             multiModifiers = true
             return Unmanaged.passUnretained(event)
         }
