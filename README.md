@@ -27,7 +27,7 @@ github "Clipy/Magnet"
 Add `⌘ + Control + B` hotkey.
 
 ```swift
-if let keyCombo = KeyCombo(keyCode: 11, carbonModifiers: 4352) {
+if let keyCombo = KeyCombo(key: .b, cocoaModifiers: [.command, .control]]) {
    let hotKey = HotKey(identifier: "CommandControlB", keyCombo: keyCombo, target: self, action: #selector())
    hotKey.register() // or HotKeyCenter.shared.register(with: hotKey)
 }
@@ -35,7 +35,7 @@ if let keyCombo = KeyCombo(keyCode: 11, carbonModifiers: 4352) {
 
 Or you can use closures.
 ```swift
-if let keyCombo = KeyCombo(keyCode: 11, carbonModifiers: 4352) {
+if let keyCombo = KeyCombo(key: .b, carbonModifiers: [.command, .control]) {
     let hotKey = HotKey(identifier: "CommandControlB", keyCombo: keyCombo) { hotKey in
         // Called when ⌘ + Control + B is pressed
     }
