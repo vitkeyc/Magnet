@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		091D85D22459554600930473 /* Sauce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091D85CF2459553A00930473 /* Sauce.framework */; };
-		091D85D32459554600930473 /* Sauce.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 091D85CF2459553A00930473 /* Sauce.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		091D85EA245A917500930473 /* NSEventExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091D85E6245A917500930473 /* NSEventExtension.swift */; };
 		091D85EB245A917500930473 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091D85E7245A917500930473 /* IntExtension.swift */; };
 		091D85EC245A917500930473 /* KeyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091D85E8245A917500930473 /* KeyExtension.swift */; };
 		091D85ED245A917500930473 /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091D85E9245A917500930473 /* CollectionExtension.swift */; };
+		09DEE124245B128C00169BEC /* Sauce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091D85CF2459553A00930473 /* Sauce.framework */; };
 		FA3AA2162315A6A3007EAA1F /* CollectionExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA2152315A6A3007EAA1F /* CollectionExtensionTests.swift */; };
 		FAEC34B31C9059DF004177E2 /* Magnet.h in Headers */ = {isa = PBXBuildFile; fileRef = FAEC34B21C9059DF004177E2 /* Magnet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAEC34BA1C9059DF004177E2 /* Magnet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEC34AF1C9059DF004177E2 /* Magnet.framework */; };
@@ -46,20 +45,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		091D85D42459554600930473 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				091D85D32459554600930473 /* Sauce.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		091D85C92459553A00930473 /* Sauce.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sauce.xcodeproj; path = ../Carthage/Checkouts/Sauce/Lib/Sauce.xcodeproj; sourceTree = "<group>"; };
 		091D85E6245A917500930473 /* NSEventExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSEventExtension.swift; sourceTree = "<group>"; };
@@ -83,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				091D85D22459554600930473 /* Sauce.framework in Frameworks */,
+				09DEE124245B128C00169BEC /* Sauce.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +175,6 @@
 				FAEC34AB1C9059DF004177E2 /* Frameworks */,
 				FAEC34AC1C9059DF004177E2 /* Headers */,
 				FAEC34AD1C9059DF004177E2 /* Resources */,
-				091D85D42459554600930473 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
