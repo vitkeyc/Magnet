@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Magnet"
-  s.version      = "3.0.3"
+  s.version      = "3.0.4"
   s.summary      = "Customize global hotkeys in macOS."
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.homepage     = "https://github.com/Clipy/Magnet"
