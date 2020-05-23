@@ -38,7 +38,7 @@ if let keyCombo = KeyCombo(key: .b, cocoaModifiers: [.command, .control]]) {
 
 Or you can use closures.
 ```swift
-if let keyCombo = KeyCombo(key: .b, carbonModifiers: [.command, .control]) {
+if let keyCombo = KeyCombo(key: .b, cocoaModifiers: [.command, .control]) {
     let hotKey = HotKey(identifier: "CommandControlB", keyCombo: keyCombo) { hotKey in
         // Called when ⌘ + Control + B is pressed
     }
