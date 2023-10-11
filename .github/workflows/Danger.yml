@@ -1,9 +1,11 @@
 name: Danger
+
 on: 
   pull_request:
   push:
     branches:
       - master
+
 jobs:
   danger:
     runs-on: macos-13
